@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Track you task Time</title>
+<link rel="stylesheet" href="style.css"/>
+<script src="timer.js"></script>
+</head>
+<body>
+    <!--Header-->
+<header></header>
+    <!--Main-->
+<div id="main">
+
+    <!--Add Task-->
+
+<div id="add-task">
+<button id="newTask">CreateTask</button>
+</div>
+
+    <!--Running Task-->
+<div id="task-area">
+    <div id="task-area-header">
+    <div id="task-area-btns">
+    <span id="task-area-label">Current Task :</span>
+    <button id="task-area-clear">Clear</button>
+    </div>
+    <div id="task-area-titles">
+    <span id="task-area-label">Title</span>
+    <span id="task-area-label">Description</span>
+    <span id="task-area-label">Time</span>
+    </div>
+    </div>
+    <div id="task-area-lists">
+    <ul id="task-area-list">
+        <!-- this needs to generate dynamically
+    <li>
+    <div id="task-title" class="runningTask">
+    </div>
+    <div id="task-description" class="runningTask">
+    </div>
+    <div id="task-time" class="runningTask">
+    </div>
+    <div id="task-controls">
+    </div>
+    </li>
+            -->
+    </ul>
+    </div>
+</div>
+
+    <!--Record Task-->
+
+<div id="Record-area">
+    <div id="Record-area-header">
+    <div id="record-area-btns">
+    <span id="task-area-label">Complete Task :</span>
+    <button id="task-area-clear">Clear</button>
+    </div>
+    <div id="Record-area-titles">
+    <span id="task-area-label">Title</span>
+    <span id="task-area-label">Description</span>
+    <span id="task-area-label">Time</span>
+    </div>
+    </div>
+    <div id="record-area-rcds">
+    <ul id="record-area-list">
+
+        <!-- this needs to generate dynamically
+
+    <li>
+     <div id="record-title" class="runningTask">
+    </div>
+    <div id="record-description" class="runningTask">
+    </div>
+    <div id="record-time" class="runningTask">
+    </div>
+    <div id="record-remove">
+    </div>
+    </li>
+            -->
+    </ul>
+    </div>
+</div>
+<ul id="task-template" style="display:none">
+  <li>
+  <div id="task-title" class="runningTask">
+    <input type="text" id="task-ttl" placehoder="Task Tittle"/>
+  </div>
+  <div id="task-description" class="runningTask">
+    <input type="text" id="task-desc" placehoder="Task Description"/>
+  </div>
+  <div id="task-time" class="runningTask">
+    <span id="task-tm">00:00:00</span>
+  </div>
+  <div id="task-controls">
+    <button id="start-task">Start</button>
+    <button id="stop-task" style="display:none">Stop</button>
+    <button id="start-task" style="display:none">x</button>
+  </div>
+  </li>
+</ul>
+    <!--End of main-->
+</div>
+    <!--Footer-->
+<footer></footer>
+</body>
+</html>
