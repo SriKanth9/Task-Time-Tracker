@@ -4,37 +4,23 @@ var taskTemp=document.getElementById("task-template");
 var cloneTask = taskTemp.cloneNode(true);
 var clnode = document.getElementById("task-area-list").appendChild(cloneTask);
 clnode.style.display = "block";
-document.getElementById("start-task").addEventListener("click",recordTask);
-  }
-function recordTask(){
-  createRecord();
-  //createButtons();
-}
-function createRecod(){
-var stTime = new timer();
-var coutTime = setInterval(stTime.startTime,1000);
-}
-function createButtons(){
-  createTimer();
-}
-function createTimer(){
 
-}
-}
-function timer(){
-  var x = 10,y = 20;
-  this.startTime = function(){
-    console.log(x+y);
+var btns = document.getElementsByClassName("start-tsk");
+for(var i=0;i<btns.length;i++){
+  btns[i].onclick = function(){
+      
   }
+}
+}
 }
 
 function Timer(){
   var srcTime = "";
-  this.time = function(){
     var h=0,m=0,s=0;
-    if(s==59){
-      sec++;
-      if(sec<10){
+  var interval = setInterval(function(){
+    if(s<=59){
+      s++;
+      if(s<10){
         srcTime="0"+h+":0"+m+":0"+s;
       }else if(m<10){
         srcTime="0"+h+":0"+m+":"+s;
@@ -46,7 +32,7 @@ function Timer(){
     document.getElementById("task-tm").innerHTML = srcTime;
   }else if(m<59){
     m++;
-    sec=0;
+    s=0;
   }else if(h<23){
     h++;
     m=0;
@@ -54,7 +40,7 @@ function Timer(){
   }else{
     document.getElementById("task-tm").innerHTML = "24:00:00";
   }
-  }
+  },1000);
 }
 
 window.onload = function(){
